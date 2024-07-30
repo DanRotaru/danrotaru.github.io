@@ -6,10 +6,8 @@
         <h1 class="h1">Some of my projects.</h1>
       </div>
 
-      <div class="projects">
-        <div class="project"
-             v-for="project in projects">
-
+      <ol class="projects">
+        <li class="project" v-for="project in projects">
           <div class="project-info">
             <h5 class="project-info__title">{{ project.name }}</h5>
             <p class="project-info__description">{{ project.description }}</p>
@@ -32,8 +30,8 @@
               <img v-else :src="project.media[0]" alt="project">
             </template>
           </div>
-        </div>
-      </div>
+        </li>
+      </ol>
 
       <h2 class="mt-30 h2 text-center">and plainly more...</h2>
     </div>
@@ -105,7 +103,7 @@ const projects = [
   },
   {
     name: 'Storage.js',
-    description: `Storage.js - the smallest, lightweight library to interactive with LocalStorage API.`,
+    description: `Storage.js - lightweight library to interactive with LocalStorage API.`,
     link: 'https://github.com/DanRotaru/storage.js',
     media: [
       '/img/projects/storage-js.svg',
@@ -114,6 +112,12 @@ const projects = [
 ];
 </script>
 <style lang="scss">
+.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .project {
   display: flex;
   gap: 20px;
