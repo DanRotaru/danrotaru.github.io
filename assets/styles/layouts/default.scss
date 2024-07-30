@@ -262,19 +262,18 @@ body {
       align-items: center;
       gap: 10px;
       margin: 30px 0;
+      padding: 0;
+      list-style: none;
 
       @media (max-width: 785px) {
         justify-content: center;
       }
 
-      a {
-        padding: 5px;
-        color: inherit;
+      li {
         pointer-events: none;
         opacity: 0;
         transform: translateX(-8px);
         filter: blur(4px);
-        line-height: 0;
         animation: left-appear 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
         animation-delay: 2s;
 
@@ -300,25 +299,75 @@ body {
           }
         }
 
-        &:hover {
+        a {
+          position: relative;
+          padding: 5px;
+          color: inherit;
+          line-height: 0;
+          text-decoration: none;
+
+          &:hover {
+            svg {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+          }
+
+          &:active {
+            svg {
+              transform: scale(.95);
+            }
+          }
+
           svg {
-            opacity: 1;
-            transform: scale(1.1);
+            width: 35px;
+            height: 35px;
+            opacity: .8;
+            transition: .2s ease;
+            transition-property: opacity, transform;
+          }
+
+          &[aria-label] {
+            &:before {
+              content: attr(aria-label);
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              padding: 5px 7px;
+              white-space: nowrap;
+              font-size: 12px;
+              line-height: 1;
+              border-radius: 5px;
+              pointer-events: none;
+              background-color: #020420;
+              color: #fff;
+              border: 1px solid #1E293B;
+              transform: translate(-50%, 23px);
+              transition-delay: .8s;
+              opacity: 0;
+              transition: 0.2s ease;
+              transition-property: transform, opacity;
+
+              @media (max-width: 768px) {
+                content: unset;
+                display: none;
+              }
+            }
+
+            &:hover {
+              &:before {
+                transition-delay: .8s;
+                opacity: 1;
+                transform: translate(-50%, 20px);
+              }
+            }
           }
         }
 
-        &:active {
-          svg {
-            transform: scale(.95);
+        &:first-child {
+          a[aria-label]:before {
+            margin-left: 7px;
           }
-        }
-
-        svg {
-          width: 35px;
-          height: 35px;
-          opacity: .8;
-          transition: .2s ease;
-          transition-property: opacity, transform;
         }
       }
     }

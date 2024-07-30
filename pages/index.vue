@@ -25,16 +25,19 @@
         </svg>
       </RouterLink>
 
-      <div class="home-cta__socials">
-        <a v-for="social in socials" :href="social.link" target="_blank"
-           :aria-label="'My' + social.name"
-           data-splitbee-event="Open Social Link"
-           :data-splitbee-event-destination="social.name">
-          <svg>
-            <use :xlink:href="'#svg-' + social.name"/>
-          </svg>
-        </a>
-      </div>
+      <ul class="home-cta__socials">
+        <li v-for="social in socials">
+          <a :href="social.link" target="_blank"
+             :aria-label="'My ' + social.name"
+             data-splitbee-event="Open Social Link"
+             :data-splitbee-event-destination="social.name">
+            <svg>
+              <use :xlink:href="'#svg-' + social.name"/>
+            </svg>
+          </a>
+        </li>
+
+      </ul>
     </div>
   </div>
 </template>
