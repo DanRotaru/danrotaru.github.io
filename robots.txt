@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dan13.me/sitemap.xml
