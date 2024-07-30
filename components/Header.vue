@@ -1,11 +1,22 @@
 <template>
   <header class="header" :class="{visible: headerVisibility}">
-    <RouterLink to="/" @click="toggleHeaderVisibility">Home</RouterLink>
-    <RouterLink to="/about" @click="toggleHeaderVisibility">About</RouterLink>
-    <RouterLink to="/projects" @click="toggleHeaderVisibility">Projects</RouterLink>
-    <RouterLink to="/toolbox" @click="toggleHeaderVisibility">Toolbox</RouterLink>
-    <RouterLink to="/blog" @click="toggleHeaderVisibility">Blog</RouterLink>
-
+    <ul>
+      <li>
+        <RouterLink to="/" @click="toggleHeaderVisibility">Home</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/about" @click="toggleHeaderVisibility">About</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/projects" @click="toggleHeaderVisibility">Projects</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/toolbox" @click="toggleHeaderVisibility">Toolbox</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/blog" @click="toggleHeaderVisibility">Blog</RouterLink>
+      </li>
+    </ul>
     <button class="theme-toggle" :class="{light: useLightTheme}" @click="setTheme" data-splitbee-event="Change Theme"
             :data-splitbee-event-destination="useLightTheme ? 'light' : 'dark'" aria-label="Theme Toggle">
       <svg viewbox="0 0 24 24">
@@ -74,47 +85,52 @@
     }
   }
 
-  a {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-    transition: .4s ease background-color;
+  ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
     @media (max-width: 500px) {
-      font-size: 18px;
-      color: #b7b7b7;
-      display: block;
-      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-      &:first-child {
-        width: calc(100% - 40px);
+    li {
+      @media (max-width: 500px) {
+        width: 100%;
+
+        &:first-child {
+          width: calc(100% - 40px);
+        }
       }
-    }
 
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(255 255 255 / 10%);
-      border-radius: 10px;
-      transition: .12s ease;
-      transition-property: transform;
-      transform: scale(0);
-      pointer-events: none;
-    }
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 10px;
+        transition: .4s ease background-color;
 
-    &:hover {
-      transition: .2s ease background-color;
-      background-color: rgb(255 255 255 / 10%);
-    }
+        @media (max-width: 500px) {
+          font-size: 18px;
+          color: #b7b7b7;
+          display: block;
+          width: 100%;
+        }
 
-    &.router-link-active {
-      background-color: rgba(255, 255, 255, 0.03);
+        &:hover {
+          transition: .2s ease background-color;
+          background-color: rgb(255 255 255 / 10%);
+        }
+
+        &.router-link-active {
+          background-color: rgba(255, 255, 255, 0.03);
+        }
+      }
     }
   }
 
