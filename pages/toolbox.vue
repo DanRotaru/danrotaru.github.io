@@ -6,13 +6,15 @@
         <h1 class="h1">Some of my favorite software</h1>
       </div>
 
-      <div class="toolbox">
-        <a :href="tool.url" target="_blank" class="toolbox__item" v-for="tool in tools"
-           data-splitbee-event="Toolbox Link" :data-splitbee-event-destination="tool.name">
-          <img v-if="tool.logo" :src="tool.logo" :alt="tool.name"/>
-          <span>{{ tool.name }}</span>
-        </a>
-      </div>
+      <ul class="toolbox">
+        <li v-for="tool in tools">
+          <a :href="tool.url" target="_blank" class="toolbox__item"
+             data-splitbee-event="Toolbox Link" :data-splitbee-event-destination="tool.name">
+            <img v-if="tool.logo" :src="tool.logo" :alt="tool.name"/>
+            <span>{{ tool.name }}</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -130,6 +132,9 @@ const tools = [
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   @media (max-width: 500px) {
     gap: 15px;
@@ -200,6 +205,10 @@ const tools = [
         opacity: .9;
         transform: translate(0) scale(1);
       }
+    }
+
+    &:active {
+      transform: translateY(0)
     }
 
     img {
