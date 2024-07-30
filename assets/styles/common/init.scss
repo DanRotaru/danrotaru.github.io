@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-synthesis: none;
+}
+
+#app,
+#__nuxt {
+  margin: 0 auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol,
+dl {
+  margin-block-start: 15px;
+  margin-block-end: 20px;
+}
+
+br {
+  line-height: 1.5;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nuxt-loading-indicator {
+  border-radius: 0 10px 10px 0 !important;
+  background: rgb(255 255 255 / 20%) !important;
+}
