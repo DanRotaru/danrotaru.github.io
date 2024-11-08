@@ -137,7 +137,7 @@ const tools = [
   padding: 0;
 
   @media (max-width: 500px) {
-    gap: 15px;
+    gap: 10px;
   }
 
   &__item {
@@ -162,7 +162,9 @@ const tools = [
     transition-property: transform, background-color, border-color;
 
     @media (max-width: 500px) {
-      width: calc(50% - 8px);
+      width: 160px;
+      height: 160px;
+      padding: 10px;
     }
 
     &:before {
@@ -216,6 +218,11 @@ const tools = [
       height: 100px;
       object-fit: contain;
       border-radius: 50%;
+
+      @media (max-width: 500px) {
+        width: 68px;
+        height: 68px;
+      }
     }
 
     span {
