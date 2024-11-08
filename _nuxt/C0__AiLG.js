@@ -1,1 +1,0 @@
-import{u as o}from"./BHKG23ku.js";import{c as a,b as e,n as s,F as l,o as r}from"./D8PNFfEq.js";const n=e("h1",null,"Layout 2",-1),u={class:"layout"},i={__name:"layout2",setup(c){return o({title:"Layout 2"}),(t,_)=>(r(),a(l,null,[n,e("div",u,[s(t.$slots,"default")])],64))}};export{i as default};
