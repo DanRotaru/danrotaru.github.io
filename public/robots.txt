@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /cdn-cgi/
 
 Sitemap: https://dan13.me/sitemap.xml
