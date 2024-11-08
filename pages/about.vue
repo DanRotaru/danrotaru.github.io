@@ -3,22 +3,20 @@
     <div class="container">
       <div class="text-center">
         <h5 class="h5">About me</h5>
-        <h1 class="h1">Here's my story.</h1>
+        <h1 class="h1">Here's my story</h1>
       </div>
 
       <p>
         I'm Dan Rotaru, a hard-working web developer, creative coder, and self-proclaimed designer specializing in
         front-end
         and back-end development. I employ a modern and personalized approach to every task. Currently, I'm based in
-        Chisinau,
-        Moldova.
+        Chisinau, Moldova.
       </p>
       <br/>
 
       <p>
         My IT career began in 2014 with basic HTML and CSS🙂. After I start learning PHP, I started building personal
-        projects.
-        Initially, it was just a hobby, but my passion grew, leading me to where I am today. Now, I prefer using
+        projects. Initially, it was just a hobby, but my passion grew, leading me to where I am today. Now, I prefer using
         JavaScript as my primary development language.
       </p>
       <br/>
@@ -603,3 +601,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useSeoMeta({
+  title: 'Dan Rotaru – About',
+  description: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge. Here\'s my story...',
+
+})
+</script>

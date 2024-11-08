@@ -1,14 +1,14 @@
 <template>
   <div class="container home">
     <div class="home-heading">
-      <h1 class="home-heading__title text-animation" aria-label="Hi👋, I'm DanRotaru, a fullstack web developer, with a creative edge.">
+      <h1 class="home-heading__title text-animation" aria-label="Hi👋, I'm DanRotaru, a fullstack web developer with a creative edge.">
         <span>Hi👋, </span>
         <span>I'm </span>
         <span class="primary">DanRotaru, </span>
         <span>a </span>
         <span>fullstack </span>
         <span>web </span>
-        <span>developer, </span>
+        <span>developer </span>
         <span>with </span>
         <span>a </span>
         <span>creative </span>
@@ -25,9 +25,11 @@
         </svg>
       </RouterLink>
 
-      <ul class="home-cta__socials">
-        <li v-for="social in socials">
+      <ul class="home-cta__socials" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li v-for="social in socials" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
           <a :href="social.link" target="_blank"
+             itemprop="item"
              :aria-label="'My ' + social.name"
              data-splitbee-event="Open Social Link"
              :data-splitbee-event-destination="social.name">

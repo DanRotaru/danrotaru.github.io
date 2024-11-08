@@ -6,12 +6,15 @@
         <h1 class="h1">Some of my favorite software</h1>
       </div>
 
-      <ul class="toolbox">
-        <li v-for="tool in tools">
-          <a :href="tool.url" target="_blank" class="toolbox__item"
+      <ul class="toolbox" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li v-for="(tool, index) in tools" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+          <meta itemprop="position" :content="(index + 1).toString()"/>
+
+          <a :href="tool.url" target="_blank" class="toolbox__item" itemprop="item"
              data-splitbee-event="Toolbox Link" :data-splitbee-event-destination="tool.name">
-            <img v-if="tool.logo" :src="tool.logo" :alt="tool.name"/>
-            <span>{{ tool.name }}</span>
+            <img itemprop="image" v-if="tool.logo" :src="tool.logo" :alt="tool.name"/>
+            <span itemprop="name">{{ tool.name }}</span>
           </a>
         </li>
       </ul>
@@ -20,6 +23,11 @@
 
 </template>
 <script setup>
+useSeoMeta({
+  title: 'Dan Rotaru – Toolbox',
+  description: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge. There are some of my favorite software...',
+})
+
 const tools = [
   {
     name: 'Google Chrome',

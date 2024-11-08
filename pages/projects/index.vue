@@ -3,15 +3,18 @@
     <div class="container container--lg">
       <div class="text-center">
         <h5 class="h5">PROJECTS</h5>
-        <h1 class="h1">Some of my projects.</h1>
+        <h1 class="h1">Some of my projects</h1>
       </div>
 
-      <ol class="projects">
-        <li class="project" v-for="project in projects">
+      <ol class="projects" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="project" v-for="(project, index) in projects" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+          <meta itemprop="position" :content="(index + 1).toString()"/>
+
           <div class="project-info">
-            <h5 class="project-info__title">{{ project.name }}</h5>
-            <p class="project-info__description">{{ project.description }}</p>
-            <a :href="project.link" target="_blank" class="project-info__link"
+            <h5 class="project-info__title" itemprop="name">{{ project.name }}</h5>
+            <p class="project-info__description" itemprop="description" v-html="project.description"></p>
+            <a :href="project.link" target="_blank" class="project-info__link" itemprop="item"
                data-splitbee-event="Open Project" :data-splitbee-event-destination="project.name">Open</a>
           </div>
 
@@ -41,6 +44,11 @@
 <script setup>
 import {Splide, SplideSlide} from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
+
+useSeoMeta({
+  title: 'Dan Rotaru – Projects',
+  description: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge. There are some of my projects...',
+})
 
 const projects = [
   {
@@ -75,6 +83,19 @@ const projects = [
       '/img/projects/ClickUpTrack/Page-3.jpg',
       '/img/projects/ClickUpTrack/Page-4.jpg',
       '/img/projects/ClickUpTrack/Page-5.jpg',
+    ],
+  },
+  {
+    name: 'JSON & Code Viewer',
+    description: `JSON & Code Viewer is a <a href="https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn">Chrome extension</a> that enhances your browsing experience by replacing default text displays with a beautifully styled code editor for JSON, CSS, and JavaScript.`,
+    link: 'https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn',
+    media: [
+      '/img/projects/JsonAndCodeViewer/main.jpg',
+      '/img/projects/JsonAndCodeViewer/monokai-theme.jpg',
+      '/img/projects/JsonAndCodeViewer/options.jpg',
+      '/img/projects/JsonAndCodeViewer/options-2.jpg',
+      '/img/projects/JsonAndCodeViewer/js-code-viewer.jpg',
+      '/img/projects/JsonAndCodeViewer/light-theme.jpg',
     ],
   },
   {

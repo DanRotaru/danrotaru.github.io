@@ -7,27 +7,27 @@ export default defineNuxtConfig({
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Dan Rotaru – full-stack engineer, designer, creative developer',
+      title: 'Dan Rotaru – full-stack web developer, engineer with a creative edge',
       meta: [
         {
-          name: 'description',
-          content: 'Dan Rotaru – a fullstack web developer with a creative edge.'
-        },
-        {
           property: 'og:site_name',
-          content: 'Dan Rotaru – full-stack engineer, designer, creative developer'
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge'
         },
         {
           property: 'og:site:name',
-          content: 'Dan Rotaru – full-stack engineer, designer, creative developer'
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge'
         },
         {
           property: 'og:title',
-          content: 'Dan Rotaru – full-stack engineer, designer, creative developer',
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge',
+        },
+        {
+          name: 'description',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge.',
         },
         {
           property: 'og:description',
-          content: 'Dan Rotaru – a fullstack web developer with a creative edge.',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge.',
         },
         {
           property: 'og:url',
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: '/img/website.png',
+          content: 'https://dan13.me/img/website.png',
         },
         {
           name: 'keywords',
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
             "itemListElement": [{
               "@type": "ListItem",
               "position": 1,
-              "name": "Dan Rotaru – full-stack engineer, designer, creative developer",
+              "name": "Home",
               "item": "https://dan13.me/"
             },{
               "@type": "ListItem",
@@ -87,6 +87,27 @@ export default defineNuxtConfig({
               "name": "Blog",
               "item": "https://dan13.me/blog"
             }]
+          }
+          `.replace(/\s+/g, ' ').trim()
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: `
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dan Rotaru",
+            "jobTitle": "Full-Stack Web Developer, Engineer",
+            "gender": "male",
+            "email": "mailto:hello@dan13.me",
+            "image": "https://dan13.me/img/avatar.jpg",
+            "url": "https://dan13.me/",
+            "sameAs" : [
+              "https://t.me/danrotaru",
+              "https://github.com/DanRotaru/",
+              "https://www.linkedin.com/in/dan-rotaru/",
+              "https://www.instagram.com/dan.rotaru13/"
+            ]
           }
           `.replace(/\s+/g, ' ').trim()
         },
