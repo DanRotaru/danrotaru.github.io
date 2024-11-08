@@ -26,8 +26,9 @@
       </RouterLink>
 
       <ul class="home-cta__socials" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li v-for="social in socials" itemprop="itemListElement" itemscope
+        <li v-for="(social, index) in socials" itemprop="itemListElement" itemscope
             itemtype="https://schema.org/ListItem">
+          <meta itemprop="position" :content="(index + 1).toString()"/>
           <a :href="social.link" target="_blank"
              itemprop="item"
              :aria-label="'My ' + social.name"
@@ -36,6 +37,7 @@
             <svg>
               <use :xlink:href="'#svg-' + social.name"/>
             </svg>
+            <span itemprop="name">{{ 'My ' + social.name }}</span>
           </a>
         </li>
 

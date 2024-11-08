@@ -69,6 +69,7 @@ export default defineNuxtConfig({
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
+            "name": "Website Menu",
             "itemListElement": [{
               "@type": "ListItem",
               "position": 1,

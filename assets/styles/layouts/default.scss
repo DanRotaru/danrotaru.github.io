@@ -327,6 +327,15 @@ body {
             transition-property: opacity, transform;
           }
 
+          span {
+            position: absolute;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            opacity: 0;
+          }
+
           &[aria-label] {
             &:before {
               content: attr(aria-label);
