@@ -605,6 +605,7 @@
 <script setup>
 useSeoMeta({
   title: 'Dan Rotaru – About',
+  ogTitle: 'Dan Rotaru – About',
   description: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge. Here\'s my story...',
 
 })

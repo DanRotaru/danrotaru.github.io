@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Dan Rotaru – full-stack web developer, engineer with a creative edge',
+      title: 'Dan Rotaru – a full-stack web developer with a creative edge',
       meta: [
         {
           property: 'og:site_name',
@@ -23,11 +23,15 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge.',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, software engineer, technology enthusiast with a creative edge.',
         },
         {
           property: 'og:description',
-          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge.',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, software engineer, technology enthusiast with a creative edge.',
+        },
+        {
+          property: 'og:type',
+          content: 'website'
         },
         {
           property: 'og:url',
@@ -35,11 +39,15 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: 'https://dan13.me/img/website.png',
+          content: 'https://dan13.me/img/website.png'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary'
         },
         {
           name: 'keywords',
-          content: 'Dan Rotaru, DanRotaru, DanR, frontend, backend, fullstack, web developer, personal website, website, danrotaru website, Dan Rotaru website, DanRotaru site, DanRotaru projects, Dan Rotaru projects, Full-stack web developer, Personal story, Professional background, Web development experience, Technology enthusiast, Skills and expertise, Career journey, Projects and achievements, Coding skills, JavaScript developer, HTML/CSS expert, Vue 3, Composition API, Software projects, Development portfolio, User experience, UI/UX design, Web design, Programming languages, Tech innovations, Career path, Software engineering, Problem solving, Application development, Code quality, Responsive design, Front-end development, Back-end development, API integration, Web technologies, JavaScript frameworks, Front-end frameworks, Back-end frameworks, Database management, Agile methodology, Software testing, DevOps practices, Code optimization, Project management, Technical skills, Digital solutions, Creative solutions, Tech career, Professional growth, Developer tools, Personal growth, Web solutions'
+          content: 'Dan Rotaru, DanRotaru, dan13, dan13.me, dan13 dev, dan 13, Dan Rotaru 13, DanRotaru 13, DanR, personal website, portfolio, creative developer, developer with a creative edge, creative edge, Software Engineer, Dan Rotaru portfolio, DanRotaru portfolio, Dan Rotaru website, DanRotaru website, DanRotaru programmer, Dan Rotaru programmer, DanRotaru web developer, Dan Rotaru web developer, Dan Rotaru dev, DanRotaru dev, frontend, backend, full-stack, web developer, full-stack web developer, technology enthusiast, Personal story, DanRotaru story, Dan Rotaru story, Javascript developer, JS developer, Dan Rotaru js, DanRotaru js, Dan Rotaru projects, Home, About, Projects, Toolbox, Blog,  development experience, Career journey, Projects and achievements, JavaScript developer, Programming languages, Tech innovations, Career path, Software engineering, Problem solving, Application development, Code quality, Responsive design, Front-end development, Back-end development, API integration, Web technologies, JavaScript frameworks, Front-end frameworks, Back-end frameworks, Database management, Agile methodology, Software testing, Skills and expertise, Coding skills, Development portfolio, User experience, UI/UX design, Web design, DevOps practices, Code optimization, Project management, Technical skills, Digital solutions, Creative solutions, Tech career, Professional growth, Developer tools, Personal growth, Web solutions, Web, Programming'
         },
         {
           name: 'author',
@@ -121,9 +129,14 @@ export default defineNuxtConfig({
           `.replace(/\s+/g, ' ').trim()
         },
       ],
+    },
+  },
+  router: {
+    options: {
+      strict: true
     }
   },
-  compatibilityDate: '2024-07-19',
+  compatibilityDate: '2024-11-08',
   css: [
     "~/assets/styles/main.scss"
   ],

@@ -47,6 +47,7 @@ import '@splidejs/vue-splide/css';
 
 useSeoMeta({
   title: 'Dan Rotaru – Projects',
+  ogTitle: 'Dan Rotaru – Projects',
   description: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, engineer with a creative edge. There are some of my projects...',
 })
 

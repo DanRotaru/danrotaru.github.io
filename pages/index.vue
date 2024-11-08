@@ -1,12 +1,12 @@
 <template>
   <div class="container home">
     <div class="home-heading">
-      <h1 class="home-heading__title text-animation" aria-label="Hi👋, I'm DanRotaru, a fullstack web developer with a creative edge.">
+      <h1 class="home-heading__title text-animation" aria-label="Hi👋, I'm DanRotaru, a full-stack web developer with a creative edge.">
         <span>Hi👋, </span>
         <span>I'm </span>
         <span class="primary">DanRotaru, </span>
         <span>a </span>
-        <span>fullstack </span>
+        <span>full-stack </span>
         <span>web </span>
         <span>developer </span>
         <span>with </span>
@@ -44,6 +44,11 @@
   </div>
 </template>
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Dan Rotaru – a full-stack web developer with a creative edge',
+  ogTitle: 'Dan Rotaru – a full-stack web developer with a creative edge',
+});
+
 const socials = [
   {
     name: 'telegram',
