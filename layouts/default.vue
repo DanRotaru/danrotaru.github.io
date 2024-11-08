@@ -16,8 +16,4 @@
 
 <script setup>
 import '@/assets/styles/layouts/default.scss';
-
-useSeoMeta({
-  title: 'Dan Rotaru – full-stack engineer, designer, creative developer'
-})
 </script>
