@@ -131,11 +131,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  router: {
-    options: {
-      strict: true
-    }
-  },
   compatibilityDate: '2024-11-08',
   css: [
     "~/assets/styles/main.scss"
