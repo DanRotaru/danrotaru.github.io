@@ -1,1 +1,0 @@
-import{c as e,o as i}from"./B9v_ZFW3.js";const r={__name:"layout2",setup(t){return(s,o)=>(i(),e("p",null," Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem deleniti distinctio ducimus eius facere id laudantium magni maxime minus odit, perferendis possimus provident quibusdam quod ratione reiciendis repellendus, vel? "))}};export{r as default};

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9c9077c7-37af-4fe9-9daf-f20bbb99e26a" name="Changes" comment="Website maintenance and seo optimizations">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/6mGBKeOo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/B9v_ZFW3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/BcO_5jJV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/Bgwbs9ci.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/CgctpFMV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/Cy_R_eXP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/D2_BF5yF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/builds/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/builds/latest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/builds/meta/6d8870b5-3c33-4a38-9e65-92d8bbe81580.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/default.Cv54wfN7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/jU__G-HC.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/lRHztIgG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_nuxt/ojDcRn_P.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/about/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout2/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/layout2/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/_payload.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2jyS4suxDti8LNonbS5SiQIttK8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.generate.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.generate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c9077c7-37af-4fe9-9daf-f20bbb99e26a" name="Changes" comment="" />
+      <created>1722357635757</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722357635757</updated>
+      <workItem from="1722357636912" duration="3042000" />
+      <workItem from="1722422960177" duration="1000" />
+      <workItem from="1731070950957" duration="7774000" />
+    </task>
+    <task id="LOCAL-00001" summary="Updated toolbox list to ul li list standard">
+      <option name="closed" value="true" />
+      <created>1722357708543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722357708543</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated projects list to ul li list standard">
+      <option name="closed" value="true" />
+      <created>1722357722871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722357722871</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated home socials to ul li list standard">
+      <option name="closed" value="true" />
+      <created>1722357744331</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722357744331</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updated header menu to ul list">
+      <option name="closed" value="true" />
+      <created>1722357755656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722357755656</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Seo optimizations">
+      <option name="closed" value="true" />
+      <created>1722357964147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722357964147</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Mobile adaptive improvements">
+      <option name="closed" value="true" />
+      <created>1731071429623</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731071429623</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Website maintenance and seo optimizations">
+      <option name="closed" value="true" />
+      <created>1731085932852</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731085932852</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Website maintenance and seo optimizations">
+      <option name="closed" value="true" />
+      <created>1731090724385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731090724385</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Website maintenance and seo optimizations">
+      <option name="closed" value="true" />
+      <created>1731091256738</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731091256738</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Updated toolbox list to ul li list standard" />
+    <MESSAGE value="Updated projects list to ul li list standard" />
+    <MESSAGE value="Updated home socials to ul li list standard" />
+    <MESSAGE value="Updated header menu to ul list" />
+    <MESSAGE value="Seo optimizations" />
+    <MESSAGE value="Mobile adaptive improvements" />
+    <MESSAGE value="Website maintenance and seo optimizations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Website maintenance and seo optimizations" />
+  </component>
+</project>
