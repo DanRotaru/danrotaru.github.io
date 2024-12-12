@@ -109,11 +109,14 @@
       }
 
       a {
-        color: #fff;
+        font-size: 15px;
+        line-height: 20px;
         text-decoration: none;
         padding: 10px;
         border-radius: 10px;
-        transition: .4s ease background-color;
+        color: rgba(226 232 255 / 75%);
+        transition: .4s ease;
+        transition-property: background-color, color;
 
         @media (max-width: 500px) {
           font-size: 18px;
@@ -123,11 +126,13 @@
         }
 
         &:hover {
+          color: #fff;
           transition: .2s ease background-color;
-          background-color: rgb(255 255 255 / 10%);
+          background-color: rgba(223, 223, 245, 0.05);
         }
 
         &.router-link-active {
+          color: #fff;
           background-color: rgba(255, 255, 255, 0.03);
         }
       }
@@ -323,7 +328,7 @@
 body:has(.page-projects):not(.light),
 body:has(.page-blog):not(.light) {
   .header {
-    background-color: #282E43;
+    background-color: #23233d;
   }
 }
 </style>
