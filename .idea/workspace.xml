@@ -5,43 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c9077c7-37af-4fe9-9daf-f20bbb99e26a" name="Changes" comment="Website maintenance and seo optimizations">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/200.html" beforeDir="false" afterPath="$PROJECT_DIR$/200.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/6mGBKeOo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/B9v_ZFW3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/BcO_5jJV.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/Bgwbs9ci.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/CgctpFMV.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/Cy_R_eXP.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/D2_BF5yF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/builds/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/_nuxt/builds/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/builds/meta/6d8870b5-3c33-4a38-9e65-92d8bbe81580.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/default.Cv54wfN7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/jU__G-HC.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/lRHztIgG.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_nuxt/ojDcRn_P.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/about/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout2/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/layout2/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/_payload.json" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/_payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -196,6 +168,7 @@
     <MESSAGE value="Seo optimizations" />
     <MESSAGE value="Mobile adaptive improvements" />
     <MESSAGE value="Website maintenance and seo optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Website maintenance and seo optimizations" />
+    <MESSAGE value="Website color improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Website color improvements" />
   </component>
 </project>
