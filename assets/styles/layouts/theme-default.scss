@@ -1,6 +1,10 @@
 // light theme styles
 html:has(.light) {
   color-scheme: light;
+
+  ::selection {
+    background: rgb(147 130 255);
+  }
 }
 
 .light {
@@ -18,10 +22,12 @@ html:has(.light) {
       color: inherit;
 
       &:hover {
+        color: #283040;
         background-color: #EDEDED;
       }
 
       &.router-link-active {
+        color: #283040;
         background-color: #F2F2F2;
       }
     }
@@ -108,6 +114,33 @@ html:has(.light) {
     &-media {
       img {
         border: 1px solid #E2E8F0;
+      }
+    }
+  }
+
+  .text-animation {
+    span.primary {
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(86.68deg, #ea12ad, #fdbc15);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  .toolbox {
+    &__item {
+      background: #ededed;
+      border-color: #d9d9d9;
+
+      &:hover {
+        background-color: #e7e7e7;
+      }
+
+      span {
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-image: unset;
       }
     }
   }

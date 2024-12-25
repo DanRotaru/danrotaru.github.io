@@ -62,7 +62,7 @@ const projects = [
   },
   {
     name: 'QuickCConverter',
-    description: `Quick Currency Converter - Fastest currency converter extension. Experience lightning-fast currency conversions.`,
+    description: `Quick Currency Converter - Fastest currency converter <a href="https://chromewebstore.google.com/detail/quickcconverter-quick-cur/ajgaihokdfdjgephfaibpdjbogepckgd" target="_blank">extension</a>. Experience lightning-fast currency conversions.`,
     link: 'https://chromewebstore.google.com/detail/quickcconverter-quick-cur/ajgaihokdfdjgephfaibpdjbogepckgd',
     media: [
       '/img/projects/QuickCConverter/Main.jpg',
@@ -75,7 +75,7 @@ const projects = [
   },
   {
     name: 'ClickUp Track',
-    description: `ClickUp Track is a Chrome extension that boosts productivity by integrating time tracking directly into your ClickUp workflow.`,
+    description: `ClickUp Track is a <a href="https://chromewebstore.google.com/detail/clickup-track/lmjdappfabcipedkfgjccefgjdgcgglb" target="_blank">Chrome extension</a> that boosts productivity by integrating time tracking directly into your ClickUp workflow.`,
     link: 'https://chromewebstore.google.com/detail/clickup-track/lmjdappfabcipedkfgjccefgjdgcgglb',
     media: [
       '/img/projects/ClickUpTrack/Page.jpg',
@@ -88,7 +88,7 @@ const projects = [
   },
   {
     name: 'JSON & Code Viewer',
-    description: `JSON & Code Viewer is a <a href="https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn">Chrome extension</a> that enhances your browsing experience by replacing default text displays with a beautifully styled code editor for JSON, CSS, and JavaScript.`,
+    description: `JSON & Code Viewer is a <a href="https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn" target="_blank">Chrome extension</a> that enhances your browsing experience by replacing default text displays with a beautifully styled code editor for JSON, CSS, and JavaScript.`,
     link: 'https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn',
     media: [
       '/img/projects/JsonAndCodeViewer/main.jpg',
