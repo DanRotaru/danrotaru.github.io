@@ -1,0 +1,1 @@
+import{u as o}from"./SsB90Sak.js";import{c as s,o as l,a as e,m as r,F as u}from"./DRFYFBQ0.js";const n={class:"layout"},_={__name:"layout2",setup(m){return o({title:"Layout 2"}),(a,t)=>(l(),s(u,null,[t[0]||(t[0]=e("h1",null,"Layout 2",-1)),e("div",n,[r(a.$slots,"default")])],64))}};export{_ as default};
