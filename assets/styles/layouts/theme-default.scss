@@ -14,21 +14,17 @@ html:has(.light) {
   color: #111827;
 
   .header {
-    background: #fff;
-    box-shadow: 0 2.8px 2.2px #00000005, 0 6.7px 5.3px #00000007, 0 12.5px 10px #00000009, 0 22.3px 17.9px #0000000b, 0 41.8px 33.4px #0000000d, 0 100px 80px #00000012;
-    backdrop-filter: none;
+    backdrop-filter: blur(4px);
+    background: linear-gradient(180deg, #ffffffb5 10%, #fffc);
+    box-shadow: 0 16px 16px -8px rgba(0, 0, 0, .03), 0px 10px 10px -5px rgba(0, 0, 0, .03), 0px 5px 5px -2.5px rgba(0, 0, 0, .03), 0px 3px 3px -1.5px rgba(0, 0, 0, .03), 0px 2px 2px -1px rgba(0, 0, 0, .03), 0px 1px 1px -0.5px rgba(0, 0, 0, .03), inset 0px 1px 0px 1px #b8b8b842;
 
     a {
       color: inherit;
 
-      &:hover {
-        color: #283040;
-        background-color: #EDEDED;
-      }
-
+      &:hover,
       &.router-link-active {
         color: #283040;
-        background-color: #F2F2F2;
+        background-color: rgb(0 0 0 / 9%);
       }
     }
 
@@ -114,6 +110,29 @@ html:has(.light) {
     &-media {
       img {
         border: 1px solid #E2E8F0;
+      }
+    }
+  }
+
+  .contact-form {
+    background: #fff;
+    border-color: #E2E8F0;
+
+    &__description {
+      color: #747474;
+    }
+
+    input,
+    textarea {
+      background: #fff;
+      color: #37352f;
+    }
+
+    .submit {
+      background-color: #000;
+
+      &:hover {
+        background-color: #37352f;
       }
     }
   }
