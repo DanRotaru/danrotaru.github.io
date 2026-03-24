@@ -2,19 +2,44 @@
   <header class="header" :class="{visible: headerVisibility}">
     <ul>
       <li>
-        <RouterLink to="/" @click="toggleHeaderVisibility">Home</RouterLink>
+        <RouterLink to="/" @click="toggleHeaderVisibility">
+          <svg>
+            <use xlink:href="#svg-home-icon"/>
+          </svg>
+          Home
+        </RouterLink>
       </li>
       <li>
-        <RouterLink to="/about" @click="toggleHeaderVisibility">About</RouterLink>
+        <RouterLink to="/about" @click="toggleHeaderVisibility">
+          <svg>
+            <use xlink:href="#svg-info-icon"/>
+          </svg>
+          About
+        </RouterLink>
       </li>
       <li>
-        <RouterLink to="/projects" @click="toggleHeaderVisibility">Projects</RouterLink>
+        <RouterLink to="/projects" @click="toggleHeaderVisibility">
+          <svg>
+            <use xlink:href="#svg-projects-icon"/>
+          </svg>
+          Projects
+        </RouterLink>
       </li>
       <li>
-        <RouterLink to="/toolbox" @click="toggleHeaderVisibility">Toolbox</RouterLink>
+        <RouterLink to="/toolbox" @click="toggleHeaderVisibility">
+          <svg>
+            <use xlink:href="#svg-tools-icon"/>
+          </svg>
+          Toolbox
+        </RouterLink>
       </li>
       <li>
-        <RouterLink to="/blog" @click="toggleHeaderVisibility">Blog</RouterLink>
+        <RouterLink to="/blog" @click="toggleHeaderVisibility">
+          <svg>
+            <use xlink:href="#svg-blog-icon"/>
+          </svg>
+          Blog
+        </RouterLink>
       </li>
     </ul>
     <button class="theme-toggle" :class="{light: useLightTheme}" @click="setTheme" data-splitbee-event="Change Theme"
@@ -54,6 +79,7 @@
   border-radius: 16px;
   background: rgb(255 255 255 / 5%);
   border: 1px solid rgb(255 255 255 / 3%);
+  box-shadow: inset 0 1px rgb(255 255 255 / 7%);
   backdrop-filter: blur(25px);
   font: 16px/1 'Inter', sans-serif;
 
@@ -67,7 +93,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 300px;
-    background-color: #1f2937;
+    background-color: rgb(30 30 52 / 75%);
     transition: .2s ease;
     transition-property: visibility, opacity, transform;
 
@@ -109,6 +135,9 @@
       }
 
       a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
         font-size: 15px;
         line-height: 20px;
         text-decoration: none;
@@ -116,12 +145,11 @@
         border-radius: 10px;
         color: rgba(226 232 255 / 75%);
         transition: .4s ease;
-        transition-property: background-color, color;
+        transition-property: background-color, color, box-shadow;
 
         @media (max-width: 500px) {
           font-size: 18px;
           color: #b7b7b7;
-          display: block;
           width: 100%;
         }
 
@@ -134,6 +162,11 @@
         &.router-link-active {
           color: #fff;
           background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
         }
       }
     }
@@ -328,7 +361,7 @@
 body:has(.page-projects):not(.light),
 body:has(.page-blog):not(.light) {
   .header {
-    background-color: #23233d;
+    background-color: rgb(30 30 52 / 75%)
   }
 }
 </style>
