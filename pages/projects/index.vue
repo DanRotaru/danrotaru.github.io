@@ -1,9 +1,12 @@
 <template>
   <div class="page page-projects">
     <div class="container container--lg">
-      <div class="text-center">
+      <div class="text-center position-relative">
         <h5 class="h5">PROJECTS</h5>
         <h1 class="h1">Some of my projects</h1>
+        <svg class="pet-icon">
+          <use xlink:href="#svg-pet-icon"/>
+        </svg>
       </div>
 
       <ol class="projects" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -14,6 +17,9 @@
           <div class="project-info">
             <h5 class="project-info__title" itemprop="name">{{ project.name }}</h5>
             <p class="project-info__description" itemprop="description" v-html="project.description"></p>
+            <div class="project-info__stack" v-if="project.stack && project.stack.length">
+              <span class="stack-chip" v-for="tech in project.stack" :key="tech">{{ tech }}</span>
+            </div>
             <a :href="project.link" target="_blank" class="project-info__link" itemprop="item"
                data-splitbee-event="Open Project" :data-splitbee-event-destination="project.name">Open</a>
           </div>
@@ -53,9 +59,19 @@ useSeoMeta({
 
 const projects = [
   {
+    name: 'Movie Shuffle',
+    description: `Discover a random movie. Set filters by year, genre, and country, then shuffle to find something new to watch.`,
+    link: 'https://movie-shuffle.dan13.me/',
+    stack: ['Web', 'Vue.js'],
+    media: [
+      '/img/projects/movie-shuffle.jpg',
+    ],
+  },
+  {
     name: 'Material Design Icons',
     description: `A Open-source iconography for designers and developers. Material design icons viewer, more than 7000+ icons, fastest way to get needed icons. Just icons, nothing else. Get to HTML, CSS, data path, encoded, or just download.`,
     link: 'https://dan13.me/icons',
+    stack: ['Web', 'Vue.js'],
     media: [
       '/img/projects/material-design-icons.png',
     ],
@@ -64,6 +80,7 @@ const projects = [
     name: 'QuickCConverter',
     description: `Quick Currency Converter - Fastest currency converter <a href="https://chromewebstore.google.com/detail/quickcconverter-quick-cur/ajgaihokdfdjgephfaibpdjbogepckgd" target="_blank">extension</a>. Experience lightning-fast currency conversions.`,
     link: 'https://chromewebstore.google.com/detail/quickcconverter-quick-cur/ajgaihokdfdjgephfaibpdjbogepckgd',
+    stack: ['Chrome Extensions', 'Vue.js', 'TypeScript'],
     media: [
       '/img/projects/QuickCConverter/Main.jpg',
       '/img/projects/QuickCConverter/Shortcut.jpg',
@@ -77,6 +94,7 @@ const projects = [
     name: 'ClickUp Track',
     description: `ClickUp Track is a <a href="https://chromewebstore.google.com/detail/clickup-track/lmjdappfabcipedkfgjccefgjdgcgglb" target="_blank">Chrome extension</a> that boosts productivity by integrating time tracking directly into your ClickUp workflow.`,
     link: 'https://chromewebstore.google.com/detail/clickup-track/lmjdappfabcipedkfgjccefgjdgcgglb',
+    stack: ['Chrome Extensions', 'Vue.js', 'JavaScript'],
     media: [
       '/img/projects/ClickUpTrack/Page.jpg',
       '/img/projects/ClickUpTrack/Page-1.jpg',
@@ -90,6 +108,7 @@ const projects = [
     name: 'JSON & Code Viewer',
     description: `JSON & Code Viewer is a <a href="https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn" target="_blank">Chrome extension</a> that enhances your browsing experience by replacing default text displays with a beautifully styled code editor for JSON, CSS, and JavaScript.`,
     link: 'https://chromewebstore.google.com/detail/json-code-viewer/miahlkanimkomfiiecemmdmjgenckamn',
+    stack: ['Chrome Extensions', 'Developer Tools', 'JavaScript'],
     media: [
       '/img/projects/JsonAndCodeViewer/main.jpg',
       '/img/projects/JsonAndCodeViewer/monokai-theme.jpg',
@@ -101,32 +120,54 @@ const projects = [
   },
   {
     name: 'SVG Tools',
-    description: `Simple way to get svg as encoded, for CSS, HTML, tag, img...`,
+    description: `Simple way to get svg as encoded, for CSS, HTML, tag, img and so on..`,
     link: 'https://dan13.me/svgtools/',
+    stack: ['Web', 'Developer Tools', 'Vue.js'],
     media: [
       '/img/projects/svgtools.png',
     ],
   },
   {
+    name: 'FreezeIt – One-Click Tab Freezer, Memory Saver',
+    description: `FreezeIt is a <a href="https://chromewebstore.google.com/detail/lpkjccggcoeennbdknjicaeojbnkidah" target="_blank">Chrome extension</a> that freezes inactive Chrome tabs in one click to save memory, with smart exclusions and full control.`,
+    link: 'https://chromewebstore.google.com/detail/lpkjccggcoeennbdknjicaeojbnkidah',
+    stack: ['Chrome Extensions', 'JavaScript'],
+    media: [
+      '/img/projects/freezeit.png',
+    ],
+  },
+  {
     name: 'ColorName',
-    description: `Get Color Name by color HEX, dont waste your time by naming color`,
+    description: `Get Color Name by color HEX, dont waste your time by naming color.`,
     link: 'https://dan13.me/colorname/',
+    stack: ['Web', 'Developer Tools', 'Vue.js'],
     media: [
       '/img/projects/colorname.png',
     ],
   },
   {
     name: 'CSS Color Filter',
-    description: `CSS color filter generator to convert from black to target hex color`,
+    description: `CSS color filter generator to convert from black to target hex color.`,
     link: 'https://dan13.me/css-filter/',
+    stack: ['Web', 'Developer Tools', 'Vue.js'],
     media: [
       '/img/projects/cssfilter.png',
+    ],
+  },
+  {
+    name: 'Refresh Rate Switcher',
+    description: `A open-source lightweight Windows desktop app for quickly changing your monitor's refresh rate.`,
+    link: 'https://github.com/DanRotaru/refresh-rate-switcher',
+    stack: ['C#', 'WPF', '.NET'],
+    media: [
+      '/img/projects/refresh-rate-switcher.jpg',
     ],
   },
   {
     name: 'Storage.js',
     description: `Storage.js - lightweight library to interactive with LocalStorage API.`,
     link: 'https://github.com/DanRotaru/storage.js',
+    stack: ['JavaScript'],
     media: [
       '/img/projects/storage-js.svg',
     ],
@@ -183,6 +224,13 @@ const projects = [
 
     &__description {
       margin-bottom: 10px;
+    }
+
+    &__stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
     }
 
     &__link {
@@ -261,7 +309,7 @@ const projects = [
     video {
       display: block;
       width: 100%;
-      max-height: 520px;
+      max-height: 488px;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 10px;
@@ -270,6 +318,24 @@ const projects = [
 
   .splide__pagination__page.is-active {
     background-color: #858585;
+  }
+}
+
+.stack-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 20px;
+  background-color: rgba(255 255 255 / 8%);
+  border: 1px solid rgba(255 255 255 / 15%);
+  transition: .2s ease;
+  transition-property: background-color, border-color;
+}
+
+.light {
+  .stack-chip {
+    background-color: rgba(0 0 0 / 8%);
+    border: 1px solid rgba(0 0 0 / 15%);
   }
 }
 </style>
