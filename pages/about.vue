@@ -598,6 +598,8 @@
         </div>
       </div>
       <br>
+
+      <ContactForm/>
     </div>
   </div>
 </template>
