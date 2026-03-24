@@ -4,9 +4,6 @@
       <div class="text-center position-relative">
         <h5 class="h5">PROJECTS</h5>
         <h1 class="h1">Some of my projects</h1>
-        <svg class="pet-icon">
-          <use xlink:href="#svg-pet-icon"/>
-        </svg>
       </div>
 
       <ol class="projects" itemscope itemtype="https://schema.org/BreadcrumbList">
