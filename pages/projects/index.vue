@@ -56,6 +56,17 @@ useSeoMeta({
 
 const projects = [
   {
+    name: 'Cepret.md',
+    description: `Compare prices of products from online stores in Moldova to quickly find the best deal.`,
+    link: 'https://cepret.md/?utm_source=dan13.me',
+    stack: ['Web', 'Fullstack', 'Express.js', 'Vue.js'],
+    media: [
+      '/img/projects/cepret/cepret.webp',
+      '/img/projects/cepret/cepret-2.webp',
+      '/img/projects/cepret/cepret-3.webp',
+    ],
+  },
+  {
     name: 'Movie Shuffle',
     description: `Discover a random movie. Set filters by year, genre, and country, then shuffle to find something new to watch.`,
     link: 'https://movie-shuffle.dan13.me/',
