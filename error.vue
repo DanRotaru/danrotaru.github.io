@@ -37,9 +37,6 @@ function goHome() {
             Back to home
             <IconArrowRight aria-hidden="true" class="not-found__icon" />
           </a>
-          <button class="not-found__button button button--secondary" data-command-menu-trigger="" type="button">
-            Search the site
-          </button>
         </div>
       </div>
     </PageHero>
