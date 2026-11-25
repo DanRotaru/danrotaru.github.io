@@ -1,0 +1,4 @@
+// Shared Sass abstractions (no CSS output). Use in any component stylesheet:
+//   @use "abstracts" as *;
+@forward "breakpoints";
+@forward "mixins";

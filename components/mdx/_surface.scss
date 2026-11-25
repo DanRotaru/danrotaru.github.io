@@ -1,0 +1,40 @@
+// Shared "tray + panel" surface used by MDX blocks (code, diagrams, tables...).
+// Usage: @use "./surface" as *;  .block { @include mdx-tray; &__panel { @include mdx-panel; } }
+
+@use "abstracts" as *;
+
+/// Outer tinted tray with a 3px gutter.
+@mixin mdx-tray {
+  padding: 3px;
+  border: 1px solid oklch(92.2% 0 0);
+  border-radius: var(--radius-2xl);
+  background-color: color-mix(in oklab, oklch(92.2% 0 0) 50%, transparent);
+
+  @include dark {
+    border-color: oklch(26.9% 0 0);
+    background-color: color-mix(in oklab, oklch(20.5% 0 0) 50%, transparent);
+  }
+}
+
+/// Inner panel sitting inside the tray.
+@mixin mdx-panel {
+  border: 1px solid color-mix(in oklab, oklch(92.2% 0 0) 80%, transparent);
+  border-radius: var(--radius-xl);
+  background-color: #f6f6f8;
+  box-shadow: 0 1px 2px #0000000d;
+
+  @include dark {
+    border-color: oklch(26.9% 0 0);
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+/// Blue focus ring used by small icon buttons.
+@mixin mdx-focus-ring {
+  outline: none;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px color-mix(in oklab, oklch(62.3% 0.214 259.815) 60%, transparent);
+  }
+}

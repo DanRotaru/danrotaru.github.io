@@ -1,0 +1,91 @@
+Hello, world 👋
+
+This is the first post on the new dan13.me. If you've been here before, you'll notice everything looks different. The old site did its job for a while, but it was small, a little stiff, and its blog page said "Coming soon..." for more than two years. So I rebuilt the whole thing, and this time the blog actually has something in it.
+
+This post covers why I did it, what's on the new site, and how it compares to the old one, with screenshots of both.
+
+## Why rebuild it
+
+I launched the old dan13.me in July 2024. It was a Nuxt 3 app with five pages: Home, About, Projects, Toolbox, and a Blog that never got a single post. I put it together quickly, pushed the generated files to GitHub Pages, and moved on to client work.
+
+A lot has changed since then. I'm a Full-Stack Engineer at Lislex now, I build EiHAI on the side, and most of my day involves AI coding agents. The old site didn't say any of that. It also had a few things I wasn't proud of: a meta tag with a hundred-odd SEO keywords, Google Analytics loaded on every page, and a layout that was basically a hero, a photo and five icons.
+
+I wanted a site that feels like me: personal, a bit playful, with room for writing.
+
+## Before and after
+
+Here are the two homepages at the same 1440px window size. The old one is on top, the new one below.
+
+<Figure src="/static/blog/hello-world/old-home.webp" alt="The old dan13.me homepage: a dark navy background, a pill navigation bar, the headline 'Hi, I'm Dan Rotaru, a full-stack web developer with a creative edge', a round photo and five social icons" width={1440} height={900} caption="The old homepage (2024): one headline, one button, five icons." />
+
+<Figure src="/static/blog/hello-world/new-home.webp" alt="The new dan13.me homepage hero" width={1440} height={900} caption="The new homepage (2026)." />
+
+I kept the headline and the photo on purpose. That part still feels right. Almost everything else changed: the type is now a serif display font, the navy gradient became a quieter near-black, and the navigation got a "More" menu and a coffee button.
+
+The old homepage also stopped at the hero. Scroll down and there was nothing else. The new one keeps going with a long grid of small cards, each one a little fact about me or my work:
+
+<Figure src="/static/blog/hello-world/new-bento.webp" alt="A section of the new homepage: a grid of cards titled Born in Moldova, Shipping cadence, On repeat (Fireflies by Martin Garrix and U2), Principles, Questions before code, Degree, Where the hours go, Feedback loop, Highlights, Languages, Fuel, and a few of my projects" width={1440} height={1650} caption="A slice of the new homepage. It keeps going for a while." />
+
+There's a card for where I was born, how often I ship, what's on repeat (usually Martin Garrix), the questions I ask before writing code, how my hours split now that AI agents do most of the typing, my coffee count for the day, Moldovan food, the trolleybuses in Chișinău, bike rides, and my job at Lislex. It's the "about me" I never managed to fit into one headline.
+
+### The blog
+
+This is the page that made me start over. Here's what the old blog looked like for its entire life:
+
+<Figure src="/static/blog/hello-world/old-blog.webp" alt="The old dan13.me blog page: the heading 'Thoughts, ideas, and inspirations.', a paragraph of intro text and the words 'Coming soon...'" width={1440} height={900} caption="The old blog: 'Coming soon...' since July 2024." />
+
+<Figure src="/static/blog/hello-world/new-blog.webp" alt="The new dan13.me blog page with tag filters, an RSS button and this post as the featured article" width={1440} height={900} caption="The new blog, with exactly one post (this one)." />
+
+One post isn't a lot, but it's one more than before.
+
+### Projects and About
+
+<Figure src="/static/blog/hello-world/old-projects.webp" alt="The old dan13.me projects page" width={1440} height={900} caption="Old projects page." />
+
+<Figure src="/static/blog/hello-world/new-projects.webp" alt="The new dan13.me projects page: tag filters across the top and EiHAI shown first, with a screenshot, its stack and a short list of features" width={1440} height={900} caption="New projects page, with 13 projects and filters by tag." />
+
+On the old site, each project was a big card with a carousel of screenshots and an "Open" button. On the new one there are more projects (13 right now), you can filter them by tag (JavaScript, open source, Chrome extension, desktop app and so on), and each one says what it does and what it's built with, not just what it looks like.
+
+### On a phone
+
+<Figure src="/static/blog/hello-world/mobile.webp" alt="The old and new dan13.me homepages side by side on a 390px wide phone screen" width={1200} height={1300} caption="Old (left) and new (right) at 390px wide." />
+
+## What's new
+
+- **More pages.** The old site had 5. The new one has About, Projects, Blog, Toolbox, Links, Contact, a Coffee page, and the legal pages.
+- **A real blog.** Posts are MDX files with syntax-highlighted code, callouts, diagrams, a floating table of contents and an FAQ section. Every post also has a plain Markdown version (add `/index.md` to the URL), there's an RSS feed at `/blog/rss.xml`, and `/llms.txt` lists everything for AI assistants.
+- **No tracking scripts.** Google Analytics is gone.
+- **Still fully static.** `nuxt generate` builds plain HTML, CSS and JS. No server, no database.
+
+## Old vs new, by the numbers
+
+<ComparisonTable
+  columns={["", "Old dan13.me", "New dan13.me"]}
+  rows={[
+    ["Launched", "July 2024", "November 2026"],
+    ["Framework", "Nuxt 3", "Nuxt 4 + TypeScript (strict)"],
+    ["Styling", "SCSS", "SCSS with BEM and design tokens"],
+    ["Pages", "5", "12, plus one per blog post"],
+    ["Vue components", "3", "260+"],
+    ["Blog posts", "0 (\"Coming soon...\")", "1, and counting"],
+    ["Feeds for machines", "sitemap.xml, robots.txt", "sitemap.xml, robots.txt, RSS, llms.txt, Markdown copy of every post"],
+    ["Analytics", "Google Analytics", "None"],
+    ["Hosting", "Static files on GitHub Pages", "Static files"],
+  ]}
+/>
+
+## How it's built
+
+The new site runs on Nuxt 4 and Vue 3.5 with strict TypeScript. I first sketched it in Next.js, then ported it to Nuxt, because Vue is where I'm most at home. Styles are plain SCSS with BEM class names and a small set of design tokens for colors, radii and fonts. No CSS framework.
+
+Blog posts are MDX files. I wired `@mdx-js/rollup` into Vite with a small custom JSX runtime so MDX compiles straight to Vue components. Code blocks are highlighted at build time with Shiki through `rehype-pretty-code`, with one theme for light mode and one for dark. Animations use `motion-v`.
+
+The whole site is generated ahead of time, so hosting it is just a matter of uploading a folder.
+
+## What's next
+
+More posts. I mean it this time. I want to write about the things I actually work on: AI coding agents, building EiHAI, Vue and Nuxt, and what I learn at Lislex. There'll also be the occasional post about coffee or a long bike ride.
+
+If you want to follow along, the [RSS feed](/blog/rss.xml) gets new posts first. And if you have thoughts about the new site, good or bad, [say hi](/contact).
+
+Thanks for reading, and welcome to the new dan13.me.

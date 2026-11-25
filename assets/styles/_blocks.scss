@@ -1,0 +1,223 @@
+// Global, reusable BEM blocks that are used as "mixes" across many components.
+// Example: <button class="nav-button glass-pill">. Component-specific styles belong
+// in the component's own .scss file, not here.
+@use "abstracts" as *;
+
+// Page-width wrapper (same values as the original `container` utility).
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + var(--container-padding) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.glass-pill {
+  @include glass-pill;
+}
+
+.liquid-glass {
+  @include liquid-glass;
+}
+
+.shadow-border {
+  @include shadow-border;
+}
+
+// Small square marker where a rail meets a horizontal border.
+// Reusable anywhere: <span class="rail-node rail-node--top-left" />
+// (parent must be position: relative).
+.rail-node {
+  position: absolute;
+  z-index: 10;
+  width: 5px;
+  height: 5px;
+  pointer-events: none;
+  background-color: oklch(70.8% 0 0);
+  box-shadow: 0 0 0 3px var(--color-canvas);
+
+  @include dark {
+    background-color: oklch(37.1% 0 0);
+  }
+
+  &--top-left {
+    top: -3px;
+    left: -3px;
+  }
+
+  &--top-right {
+    top: -3px;
+    right: -3px;
+  }
+
+  &--bottom-left {
+    bottom: -3px;
+    left: -3px;
+  }
+
+  &--bottom-right {
+    bottom: -3px;
+    right: -3px;
+  }
+}
+
+.visually-hidden {
+  @include sr-only;
+}
+
+// ---------------------------------------------------------------------------
+// heading — Instrument Serif display headings
+// <h1 class="heading heading--page">, <h2 class="heading heading--section">
+// ---------------------------------------------------------------------------
+.heading {
+  @include heading-serif;
+
+  &--page {
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.9px;
+
+    @include mq(md) {
+      font-size: 48px;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  &--section {
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: 0.75px;
+  }
+
+  &--card {
+    font-size: 20px;
+    line-height: 1.375;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Multicolor gradient text (original: `text-colorfull`).
+.text-gradient {
+  background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// ---------------------------------------------------------------------------
+// button — tactile primary/secondary buttons (original: btn-primary/btn-secondary).
+// Sizing/layout is up to the component: <a class="cta__button button button--primary">
+// ---------------------------------------------------------------------------
+.button {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+  transition: all 0.2s var(--ease-default);
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+  }
+
+  &:active {
+    scale: 0.97;
+  }
+
+  &:disabled {
+    cursor: default;
+    scale: 1;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &--primary {
+    --button-bg: #296ff0;
+    color: #fff;
+    background-color: var(--button-bg);
+    border-radius: 12px;
+    box-shadow:
+      0 3px 6px #0003,
+      inset 0 0 6px 2px #ffffff3d,
+      0 0 0 1px #296ff0;
+
+    &::before {
+      background: linear-gradient(#fff6, #fff0);
+    }
+
+    &:hover {
+      --button-bg: #1f62e0;
+    }
+
+    &:focus-visible {
+      outline: 4px solid #296ff040;
+      outline-offset: 1px;
+    }
+  }
+
+  &--secondary {
+    --button-bg: #fff;
+    --button-shade: #00000012;
+    --button-ring: #00000021;
+    --button-glow: #fff9;
+    --button-edge: #fff;
+    --button-bottom: #00000014;
+    color: oklch(20.5% 0 0);
+    background-color: var(--button-bg);
+    background-image: linear-gradient(transparent, var(--button-shade));
+    box-shadow:
+      0 4px 8px -1px #00000024,
+      0 1px 2px #0000001a,
+      inset 0 0 6px 2px var(--button-glow),
+      inset 0 -1.5px 0 var(--button-bottom),
+      0 0 0 1px var(--button-ring);
+
+    &::before {
+      background: linear-gradient(var(--button-edge), #fff0);
+    }
+
+    &:hover {
+      --button-shade: #0000001c;
+    }
+
+    &:focus-visible {
+      outline: 4px solid #00000014;
+      outline-offset: 1px;
+    }
+
+    &:active {
+      --button-shade: #0000000a;
+      box-shadow:
+        0 1px 2px #0000001a,
+        inset 0 1px 3px #00000014,
+        0 0 0 1px var(--button-ring);
+    }
+
+    @include dark {
+      --button-bg: #ffffff1a;
+      --button-shade: #0000001f;
+      --button-ring: #00000059;
+      --button-glow: #ffffff0a;
+      --button-edge: #fff3;
+      --button-bottom: #0000002e;
+      color: #fff;
+
+      &:hover {
+        --button-bg: #ffffff24;
+      }
+
+      &:focus-visible {
+        outline-color: #ffffff2e;
+      }
+    }
+  }
+}

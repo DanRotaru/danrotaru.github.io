@@ -1,0 +1,29 @@
+@use "abstracts" as *;
+
+.case-media {
+  padding: 8px;
+  border-bottom: 1px solid var(--color-border);
+  @include hatch;
+
+  @include mq(md) {
+    padding: 12px;
+  }
+
+  &__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: oklch(87.1% 0.006 286.286);
+    border-radius: calc(var(--radius) * 1.8);
+    box-shadow: 0 0 0 1px var(--color-border);
+
+    @include dark {
+      background-color: oklch(37% 0.013 285.805);
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}
