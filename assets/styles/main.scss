@@ -1,7 +1,2 @@
-// Global stylesheet entry, imported once in nuxt.config.ts (`css`).
-// Component styles are co-located with their components (BEM, one block per file).
-@use "tokens";
-@use "reset";
-@use "base";
-@use "keyframes";
-@use "blocks";
+@import './mixins';
+@import './common';

@@ -1,0 +1,166 @@
+// light theme styles
+html:has(.light) {
+  color-scheme: light;
+
+  ::selection {
+    background: rgb(147 130 255);
+  }
+}
+
+.light {
+  color-scheme: light;
+
+  background-color: #fff;
+  color: #111827;
+
+  .header {
+    backdrop-filter: blur(4px);
+    background: linear-gradient(180deg, #ffffffb5 10%, #fffc);
+    box-shadow: 0 16px 16px -8px rgba(0, 0, 0, .03), 0px 10px 10px -5px rgba(0, 0, 0, .03), 0px 5px 5px -2.5px rgba(0, 0, 0, .03), 0px 3px 3px -1.5px rgba(0, 0, 0, .03), 0px 2px 2px -1px rgba(0, 0, 0, .03), 0px 1px 1px -0.5px rgba(0, 0, 0, .03), inset 0px 1px 0px 1px #b8b8b842;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &.router-link-active {
+        color: #283040;
+        background-color: rgb(0 0 0 / 9%);
+      }
+    }
+
+    &__hamburger {
+      background-color: #fff;
+      color: inherit;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.0196078431), 0 6.7px 5.3px rgba(0, 0, 0, 0.0274509804), 0 12.5px 10px rgba(0, 0, 0, 0.0352941176), 0 22.3px 17.9px rgba(0, 0, 0, 0.0431372549), 0 41.8px 33.4px rgba(0, 0, 0, 0.0509803922), 0 100px 80px rgba(0, 0, 0, 0.0705882353);
+
+      &.active {
+        box-shadow: none;
+      }
+
+      svg path {
+        stroke: #111827;
+      }
+    }
+
+    .theme-toggle {
+      background-color: #1e293b;
+    }
+  }
+
+  .home {
+    &:before,
+    &:after {
+      opacity: .5;
+    }
+
+    &-cta {
+      &__btn {
+        background-color: #1e293b;
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+          background-color: #19202c;
+        }
+
+        svg {
+          stroke: #fff;
+        }
+      }
+
+      &__socials {
+        a {
+          &:hover {
+            color: #111827;
+          }
+        }
+      }
+    }
+  }
+
+  .decorations {
+    &:before {
+      filter: invert(1);
+    }
+  }
+
+  p,
+  a {
+    color: #283040;
+  }
+
+  a:hover {
+    color: #111827;
+  }
+
+  .tech-stack,
+  .tech-stack-item {
+    background-color: rgba(0 0 0 / 10%);
+  }
+
+  .project {
+    background-color: #F8FAFC;
+    border-color: #E2E8F0;
+
+    &:hover {
+      background-color: #F8FAFC;
+      border-color: #E2E8F0;
+    }
+
+    &-media {
+      img {
+        border: 1px solid #E2E8F0;
+      }
+    }
+  }
+
+  .contact-form {
+    background: #fff;
+    border-color: #E2E8F0;
+
+    &__description {
+      color: #747474;
+    }
+
+    input,
+    textarea {
+      background: #fff;
+      color: #37352f;
+    }
+
+    .submit {
+      background-color: #000;
+
+      &:hover {
+        background-color: #37352f;
+      }
+    }
+  }
+
+  .text-animation {
+    span.primary {
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(86.68deg, #ea12ad, #fdbc15);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  .toolbox {
+    &__item {
+      background: #ededed;
+      border-color: #d9d9d9;
+
+      &:hover {
+        background-color: #e7e7e7;
+      }
+
+      span {
+        -webkit-background-clip: initial;
+        background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-image: unset;
+      }
+    }
+  }
+}

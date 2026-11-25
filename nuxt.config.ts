@@ -1,190 +1,143 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath } from "node:url";
-
-import mdx from "@mdx-js/rollup";
-import rehypePrettyCode from "rehype-pretty-code";
-import rehypeSlug from "rehype-slug";
-import remarkGfm from "remark-gfm";
-
-import { posts } from "./data/posts";
-import { analytics, keywords, siteJsonLd } from "./lib/seo";
-import { site } from "./lib/site";
-
-// Analytics only on production builds, so local dev visits are not tracked.
-const isProd = process.env.NODE_ENV === "production";
-
 export default defineNuxtConfig({
-  compatibilityDate: "2026-11-01",
-  // Classic layout (no `app/` folder), same as the /dev project.
-  srcDir: ".",
-  serverDir: "server",
-  devtools: { enabled: false },
-  devServer: { port: 8105 },
-
-  modules: ["@nuxtjs/color-mode"],
-
-  // Same behaviour as next-themes in the Next version: class on <html>, dark by default, system aware.
-  colorMode: {
-    preference: "dark",
-    fallback: "dark",
-    classSuffix: "",
-    storageKey: "theme",
-    // Same as next-themes `disableTransitionOnChange`.
-    disableTransition: true,
-  },
-
-  components: [
-    // <IconArrowRight />, <IconGithubMark /> ...
-    { path: "~/components/icons", prefix: "Icon", extensions: [".vue"] },
-    // Every other component is auto-imported by its file name (<HomeHero />, <SiteHeader /> ...).
-    { path: "~/components", pathPrefix: false, extensions: [".vue"] },
-  ],
-
-  css: ["~/assets/styles/main.scss"],
-
   app: {
     head: {
-      htmlAttrs: { lang: "en" },
-      bodyAttrs: { class: "site" },
-      // Default title; pages set their full title through usePageMeta().
-      title: site.title,
+      htmlAttrs: {
+        lang: 'en'
+      },
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'Dan Rotaru – a full-stack web developer with a creative edge',
       meta: [
-        { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-        { name: "color-scheme", content: "dark light" },
-        { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#0a0a0a" },
-        { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#F4F4F4" },
-        { name: "application-name", content: site.name },
-        { name: "keywords", content: keywords },
-        { name: "author", content: site.name },
-        { name: "creator", content: site.name },
-        { name: "publisher", content: site.name },
-        { name: "referrer", content: "strict-origin-when-cross-origin" },
-        { name: "format-detection", content: "telephone=no" },
         {
-          name: "robots",
-          content: "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+          property: 'og:site_name',
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge'
         },
-      ],
-      link: [
-        { rel: "icon", type: "image/svg+xml", href: "/static/favicon/favicon.svg" },
-        { rel: "icon", href: "/static/favicon/favicon.ico", sizes: "48x48" },
-        { rel: "icon", type: "image/png", sizes: "512x512", href: "/static/favicon/favicon-512x512.png" },
-        { rel: "icon", type: "image/png", sizes: "128x128", href: "/static/favicon/favicon-128x128.png" },
-        { rel: "icon", type: "image/png", sizes: "64x64", href: "/static/favicon/favicon-64x64.png" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/static/favicon/favicon-32x32.png" },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: "/static/favicon/favicon-16x16.png" },
-        { rel: "apple-touch-icon", sizes: "180x180", href: "/static/favicon/apple-touch-icon.png" },
-        { rel: "manifest", href: "/manifest.webmanifest" },
-        { rel: "alternate", type: "application/rss+xml", href: "/blog/rss.xml" },
-        { rel: "me", href: site.socials.github },
-        { rel: "me", href: site.socials.linkedin },
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         {
-          rel: "stylesheet",
-          href:
-            "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800" +
-            "&family=Caveat:wght@500&family=Geist+Mono:wght@100..900" +
-            "&family=Instrument+Serif:ital@0;1&display=swap",
+          property: 'og:site:name',
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge'
         },
+        {
+          property: 'og:title',
+          content: 'Dan Rotaru – a full-stack web developer with a creative edge',
+        },
+        {
+          name: 'description',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, software engineer, technology enthusiast with a creative edge.',
+        },
+        {
+          property: 'og:description',
+          content: 'Hi👋, my name is Dan Rotaru, I\'m a full-stack web developer, software engineer, technology enthusiast with a creative edge.',
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          property: 'og:url',
+          content: 'https://dan13.me/',
+        },
+        {
+          property: 'og:image',
+          content: 'https://dan13.me/img/website.png'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'keywords',
+          content: 'Dan Rotaru, DanRotaru, dan13, dan13.me, dan13 dev, dan 13, Dan Rotaru 13, DanRotaru 13, DanR, personal website, portfolio, creative developer, developer with a creative edge, creative edge, Software Engineer, Dan Rotaru portfolio, DanRotaru portfolio, Dan Rotaru website, DanRotaru website, DanRotaru programmer, Dan Rotaru programmer, DanRotaru web developer, Dan Rotaru web developer, Dan Rotaru dev, DanRotaru dev, frontend, backend, full-stack, web developer, full-stack web developer, technology enthusiast, Personal story, DanRotaru story, Dan Rotaru story, Javascript developer, JS developer, Dan Rotaru js, DanRotaru js, Dan Rotaru projects, Home, About, Projects, Toolbox, Blog,  development experience, Career journey, Projects and achievements, JavaScript developer, Programming languages, Tech innovations, Career path, Software engineering, Problem solving, Application development, Code quality, Responsive design, Front-end development, Back-end development, API integration, Web technologies, JavaScript frameworks, Front-end frameworks, Back-end frameworks, Database management, Agile methodology, Software testing, Skills and expertise, Coding skills, Development portfolio, User experience, UI/UX design, Web design, DevOps practices, Code optimization, Project management, Technical skills, Digital solutions, Creative solutions, Tech career, Professional growth, Developer tools, Personal growth, Web solutions, Web, Programming'
+        },
+        {
+          name: 'author',
+          content: 'Dan Rotaru'
+        }
       ],
       script: [
-        // Person + WebSite structured data (each page adds its own WebPage/BlogPosting + breadcrumbs).
-        { key: "site-jsonld", type: "application/ld+json", innerHTML: JSON.stringify(siteJsonLd()) },
-        ...(isProd
-          ? [
-              // Google Analytics 4
-              { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${analytics.gaId}` },
-              {
-                key: "gtag-init",
-                innerHTML:
-                  "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}" +
-                  `gtag('js',new Date());gtag('config','${analytics.gaId}');`,
-              },
-              // Microsoft Clarity
-              {
-                key: "clarity-init",
-                innerHTML:
-                  '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};' +
-                  't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;' +
-                  'y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);' +
-                  `})(window,document,"clarity","script","${analytics.clarityId}");`,
-              },
-            ]
-          : []),
-      ],
-    },
-  },
-
-  runtimeConfig: {
-    public: {
-      // Optional form endpoint (e.g. Formspree) for the contact form: NUXT_PUBLIC_CONTACT_ENDPOINT.
-      contactEndpoint: "",
-    },
-  },
-
-  // Fully static output (`nuxt generate` -> .output/public).
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: [
-        "/",
-        "/sitemap.xml",
-        "/robots.txt",
-        "/llms.txt",
-        "/blog/rss.xml",
-        "/manifest.webmanifest",
-        ...posts.flatMap((post) => [`/blog/${post.slug}`, `/blog/${post.slug}/index.md`]),
-      ],
-    },
-    // Raw MDX sources for the /blog/<slug>/index.md Markdown twins.
-    serverAssets: [{ baseName: "blog", dir: fileURLToPath(new URL("./content/blog", import.meta.url)) }],
-  },
-
-  vite: {
-    resolve: {
-      alias: {
-        // Custom JSX runtime for MDX -> Vue (lib/mdx-jsx-runtime.ts).
-        "mdx-vue/jsx-runtime": fileURLToPath(new URL("./lib/mdx-jsx-runtime.ts", import.meta.url)),
-      },
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          // Lets every SCSS file do `@use "abstracts" as *;`
-          loadPaths: [fileURLToPath(new URL("./assets/styles", import.meta.url))],
+        {
+          async: true,
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-Y14P7SCC0F'
         },
-      },
+        {
+          async: true,
+          src: 'https://cdn.splitbee.io/sb.js'
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: `
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "name": "Website Menu",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://dan13.me/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About me",
+              "item": "https://dan13.me/about"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Projects",
+              "item": "https://dan13.me/projects"
+            },{
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Toolbox",
+              "item": "https://dan13.me/toolbox"
+            },{
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Blog",
+              "item": "https://dan13.me/blog"
+            }]
+          }
+          `.replace(/\s+/g, ' ').trim()
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: `
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dan Rotaru",
+            "jobTitle": "Full-Stack Web Developer, Engineer",
+            "gender": "male",
+            "email": "mailto:hello@dan13.me",
+            "image": "https://dan13.me/img/avatar.jpg",
+            "url": "https://dan13.me/",
+            "sameAs" : [
+              "https://t.me/danrotaru",
+              "https://github.com/DanRotaru/",
+              "https://www.linkedin.com/in/dan-rotaru/",
+              "https://www.instagram.com/dan.rotaru13/"
+            ]
+          }
+          `.replace(/\s+/g, ' ').trim()
+        },
+        {
+          innerHTML: `(function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "h7m4aqhro4");
+          window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-Y14P7SCC0F');
+          `.replace(/\s+/g, ' ').trim()
+        },
+      ],
     },
-    plugins: [
-      {
-        enforce: "pre",
-        ...mdx({
-          jsxImportSource: "mdx-vue",
-          // Always emit `mdx-vue/jsx-runtime` (the only aliased entry); in dev the plugin
-          // would otherwise import `mdx-vue/jsx-dev-runtime`, which doesn't resolve.
-          development: false,
-          elementAttributeNameCase: "html",
-          stylePropertyNameCase: "css",
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [
-            rehypeSlug,
-            [
-              rehypePrettyCode,
-              {
-                // Dual theme via --shiki-light / --shiki-dark.
-                theme: { light: "github-light-default", dark: "vesper" },
-                keepBackground: false,
-                defaultLang: { block: "plaintext" },
-              },
-            ],
-          ],
-        }),
-      },
-    ],
   },
-
-  typescript: {
-    strict: true,
-  },
-});
+  compatibilityDate: '2024-11-08',
+  css: [
+    "~/assets/styles/main.scss"
+  ],
+  devtools: { enabled: false },
+  devServer: {
+    port: 8105
+  }
+})

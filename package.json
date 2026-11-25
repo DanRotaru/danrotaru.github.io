@@ -1,33 +1,20 @@
 {
-  "name": "portfolio-nuxt",
+  "name": "personal-nuxt-app",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev --port 8105 --host localhost",
-    "dev-host": "nuxt dev --host",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@mdx-js/rollup": "^3.1.1",
-    "@nuxtjs/color-mode": "^4.1.0",
-    "motion-v": "^2.12.0",
-    "nuxt": "^4.7.0",
-    "rehype-pretty-code": "^0.14.6",
-    "rehype-slug": "^6.0.0",
-    "remark-gfm": "^4.0.1",
-    "shiki": "^4.6.0",
-    "vue": "^3.5.45",
-    "vue-router": "^5.5.0"
+    "@splidejs/vue-splide": "^0.6.12",
+    "nuxt": "^4.2.2",
+    "vue": "latest"
   },
   "devDependencies": {
-    "@types/mdx": "^2.0.14",
-    "@types/node": "^22",
-    "sass": "^1.108.2",
-    "typescript": "^5.9.3",
-    "vue-tsc": "^3.3.14"
+    "sass": "^1.77.6"
   }
 }
